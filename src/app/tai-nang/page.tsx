@@ -1,13 +1,11 @@
 "use client";
 
 import React from "react";
-import {
-  Breadcrumb,
-  theme,
-} from "antd";
-import MainLayout from "./components/core/layouts/MainLayout";
+import { Breadcrumb, theme } from "antd";
 
-const Home: React.FC = () => {
+import MainLayout from "../components/core/layouts/MainLayout";
+
+const Talents: React.FC = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -16,6 +14,7 @@ const Home: React.FC = () => {
     <MainLayout>
       <Breadcrumb style={{ margin: "16px 0" }}>
         <Breadcrumb.Item>Trang chủ</Breadcrumb.Item>
+        <Breadcrumb.Item>Tài năng</Breadcrumb.Item>
       </Breadcrumb>
       <div
         style={{
@@ -25,10 +24,10 @@ const Home: React.FC = () => {
           borderRadius: borderRadiusLG,
         }}
       >
-        Trang chủ
+        Tài năng
       </div>
     </MainLayout>
   );
 };
 
-export default Home;
+export default Talents;
