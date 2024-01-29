@@ -9,6 +9,8 @@ import {
   MdOutlineKeyboardDoubleArrowUp,
 } from "react-icons/md";
 import Chatbox from "../../chatbox";
+import Navbar from "../../chatbox/Navbar";
+import SmallNabBar from "../../chatbox/SmallNavBar";
 
 const mockVal = (str: string, repeat = 1) => ({
   value: str.repeat(repeat),
@@ -74,18 +76,27 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
-        <AutoComplete
-          options={options}
-          style={{ width: "100%", height: "50px" }}
-          onSearch={(text) => setOptions(getPanelValue(text))}
-          placeholder="Nhập để tìm kiếm"
-          allowClear={{ clearIcon: <CloseSquareFilled /> }}
-        />
-       
+        <div className="relative w-full">
+          {isProsearch ? (
+            <AutoComplete
+              options={options}
+              style={{ width: "100%", height: "50px" }}
+              onSearch={(text) => setOptions(getPanelValue(text))}
+              placeholder="Nhập để tìm kiếm"
+              allowClear={{ clearIcon: <CloseSquareFilled /> }}
+            />
+          ) : (
+            <div onClick={()=>{setIsOpenChatbox(!isOpenChatbox)}}>
+              {!isOpenChatbox ? <Navbar></Navbar> : <SmallNabBar></SmallNabBar>}
+            </div>
+          )}
+        </div>
       </div>
-       <div className="rounded-[10px] mt-5">
-       <Chatbox></Chatbox>
-       </div>
+      <div className="rounded-[10px] mt-5">
+        <div className={isProsearch || isOpenChatbox ? "hidden" : "block"}>
+          <Chatbox></Chatbox>
+        </div>
+      </div>
     </>
   );
 };

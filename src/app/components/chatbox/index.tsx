@@ -16,9 +16,9 @@ export default function Chatbox() {
   };
 
   return (
-    <div className="w-full bg-gray-100  flex flex-col justify-center   " >
+    <div className="w-full bg-gray-100 rounded-[10px]  flex flex-col justify-center   " >
     <div className="relative py-3  sm:m-auto">
-      <div className="relative w-[100%]  mx-auto bg-white shadow-lg sm:rounded-3xl px-[20px] pt-[20px] pb-[80px] bg-clip-padding bg-opacity-40 border border-gray-200" style={{backdropFilter : "10px"}}>
+      <div className="relative w-[100%]  mx-auto bg-white shadow-lg rounded-[10px] px-[20px] pt-[20px] pb-[80px] bg-clip-padding bg-opacity-40 border border-gray-200" style={{backdropFilter : "10px"}}>
         <div className="w-[850px] h-[500px] mx-auto">
         <Chat toggleComponentVisibility={toggleComponentVisibility} />
         </div>

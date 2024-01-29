@@ -48,7 +48,7 @@ const Scholarships: React.FC = () => {
           <div className="border border-0 w-[25%] border-t-[8px]  rounded-t-[10px] border-t-primary-main mx-auto">
             <SiderBar></SiderBar>
           </div>
-          <div className="px-[20px] w-[55%] h-[2000px] sticky top-[20px]">
+          <div className="px-[20px] w-[55%] h-[5000px] sticky top-[20px]">
             <div>
               <Title>Tìm kiếm học bổng</Title>
               <Search></Search>
