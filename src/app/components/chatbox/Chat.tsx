@@ -150,7 +150,8 @@ const Chat = (props: any) => {
                 <button
                   disabled={isLoading || message?.length === 0}
                   onClick={sendMessage}
-                  className="absolute p-1 rounded-md bottom-1.5 md:bottom-2.5 bg-transparent disabled:bg-gray-500 right-1 md:right-2 disabled:opacity-40"
+                  className="absolute p-1 rounded-md bottom-1.5 md:bottom-2.5 bg-transparent di
+                  sabled:bg-gray-500 right-1 md:right-2 disabled:opacity-40"
                 >
                   <FiSend className="h-4 w-4 mr-1 text-white " />
                 </button>

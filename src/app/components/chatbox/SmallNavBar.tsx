@@ -11,7 +11,7 @@ function SmallNabBar() {
               Bạn đang tìm kiếm thông tin về học bổng đại học bách khoa Đà Nẵng
             </div>
             <div className="">
-              <MdClose className="text-[30px] mt-[2px]  bg-black rounded-[50px]" />
+              <MdClose className="text-[30px] mt-[2px]  bg-white text-black/50 rounded-[50px]" />
             </div>
           </div>
         </div>
