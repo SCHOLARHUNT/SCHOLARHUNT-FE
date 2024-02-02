@@ -65,9 +65,6 @@ const MainLayout = ({ children }: IProps) => {
     } else return 0;
   };
 
-  // console.log(pathName);
-  // console.log(HighlightKey());
-
   return (
     <Layout>
       <Header
@@ -142,7 +139,7 @@ const MainLayout = ({ children }: IProps) => {
       </Header>
       <Content style={{ padding: "0 48px" }}>{children}</Content>
       <Footer style={{ textAlign: "center" }}>
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
+        Scholar Hunt ©{new Date().getFullYear()} Created by Life Tech
       </Footer>
     </Layout>
   );

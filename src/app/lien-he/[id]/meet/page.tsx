@@ -2,8 +2,11 @@
 
 import * as React from "react";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+import { Button } from "antd";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-function randomID(len: string) {
+function randomID(len: any) {
   let result = "";
   if (result) return result;
   var chars = "12345qwertyuiopasdfgh67890jklmnbvcxzMNBVCZXASDQWERTYHGFUIOLKJP",
@@ -22,8 +25,10 @@ export function getUrlParams(url = window.location.href) {
 }
 
 export default function App() {
+  const router = useRouter();
+
   const roomID = getUrlParams().get("roomID") || randomID(5);
-  let myMeeting = async (element) => {
+  let myMeeting = async (element: any) => {
     // generate Kit Token
     const appID = 251414451;
     const serverSecret = "acee82cdde5aceaa1bae4c9bbce9bca7";
@@ -59,10 +64,12 @@ export default function App() {
   };
 
   return (
-    <div
-      className="myCallContainer"
-      ref={myMeeting}
-      style={{ width: "100vw", height: "100vh" }}
-    ></div>
+    <>
+      <div
+        className="myCallContainer"
+        ref={myMeeting}
+        style={{ width: "100vw", height: "100vh" }}
+      ></div>
+    </>
   );
 }
