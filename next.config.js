@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         // pathname: "/account123/**",
       },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+        port: "",
+        // pathname: "/account123/**",
+      },
     ],
   },
 };

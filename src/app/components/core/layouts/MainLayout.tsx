@@ -42,7 +42,7 @@ const items: MenuProps["items"] = [
     icon: <TeamOutlined />,
   },
   {
-    label: <Link href={"/lien-he"}>Liên hệ</Link>,
+    label: <Link href={"/lien-he/1"}>Liên hệ</Link>,
     key: "2",
     icon: <MessageOutlined />,
   },
@@ -57,17 +57,16 @@ const MainLayout = ({ children }: IProps) => {
 
   const HighlightKey = () => {
     if (pathName === "/hoc-bong") {
-        return 0;
+      return 0;
     } else if (pathName === "/tai-nang") {
-        return 1;
+      return 1;
     } else if (pathName === "/lien-he") {
-        return 2;
-    } else return 0
+      return 2;
+    } else return 0;
   };
 
-  console.log(pathName);
-  console.log(HighlightKey());
-  
+  // console.log(pathName);
+  // console.log(HighlightKey());
 
   return (
     <Layout>
@@ -141,9 +140,7 @@ const MainLayout = ({ children }: IProps) => {
           </Flex>
         </Flex>
       </Header>
-      <Content style={{ padding: "0 48px", minHeight: "100vh" }}>
-        {children}
-      </Content>
+      <Content style={{ padding: "0 48px" }}>{children}</Content>
       <Footer style={{ textAlign: "center" }}>
         Ant Design ©{new Date().getFullYear()} Created by Ant UED
       </Footer>
