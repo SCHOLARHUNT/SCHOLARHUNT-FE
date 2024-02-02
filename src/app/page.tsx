@@ -1,10 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Breadcrumb,
-  theme,
-} from "antd";
+import { Breadcrumb, theme } from "antd";
 import MainLayout from "./components/core/layouts/MainLayout";
 
 const Home: React.FC = () => {
