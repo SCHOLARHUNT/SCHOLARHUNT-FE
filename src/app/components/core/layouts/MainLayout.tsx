@@ -27,6 +27,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { UserButton } from "@clerk/nextjs";
 
 const { Header, Content, Footer } = Layout;
 
@@ -119,7 +120,8 @@ const MainLayout = ({ children }: IProps) => {
                 </Badge>
               </Flex>
             </Dropdown>
-            <Dropdown menu={{ items }} placement="bottomRight" arrow>
+            <UserButton afterSignOutUrl="/" />
+            {/* <Dropdown menu={{ items }} placement="bottomRight" arrow>
               <Avatar
                 src={
                   <Image
@@ -133,7 +135,7 @@ const MainLayout = ({ children }: IProps) => {
                 }
                 size={"large"}
               />
-            </Dropdown>
+            </Dropdown> */}
           </Flex>
         </Flex>
       </Header>
